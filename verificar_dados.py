@@ -1,0 +1,25 @@
+import pandas as pd
+
+dados = pd.read_csv('petr4a.csv', index_col=0, parse_dates=True)
+dados['retorno_diario'] = dados['Adj Close'].pct_change(fill_method=None)
+dados = dados[['Adj Close', 'retorno_diario']].dropna()
+
+print('=== ANÁLISE DOS DADOS ===')
+print(f'Total de registros: {len(dados)}')
+print(f'Data inicial: {dados.index[0]}')
+print(f'Data final: {dados.index[-1]}')
+print(f'\nPreço de Fechamento (Adj Close):')
+print(f'  Mínimo: R$ {dados["Adj Close"].min():.2f}')
+print(f'  Máximo: R$ {dados["Adj Close"].max():.2f}')
+print(f'  Média: R$ {dados["Adj Close"].mean():.2f}')
+print(f'  Último: R$ {dados["Adj Close"].iloc[-1]:.2f}')
+print(f'\nRetorno Diário:')
+print(f'  Mínimo: {dados["retorno_diario"].min()*100:.2f}%')
+print(f'  Máximo: {dados["retorno_diario"].max()*100:.2f}%')
+print(f'  Média: {dados["retorno_diario"].mean()*100:.4f}%')
+print(f'  Volatilidade (Std): {dados["retorno_diario"].std()*100:.4f}%')
+
+print(f'\nPrimeiros 5 registros:')
+print(dados.head())
+print(f'\nÚltimos 5 registros:')
+print(dados.tail())

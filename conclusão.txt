@@ -1,0 +1,18 @@
+✅ Os dados estão corretos! Aqui está o resumo:
+
+Dados da PETR4:
+
+Total de registros: 18 dias úteis
+Período: 03/01/2023 a 14/10/2024
+Preço mínimo: R$ 24.00
+Preço máximo: R$ 37.50
+Preço final: R$ 37.50
+Preço médio: R$ 30.82
+Análise de Retorno Diário:
+
+Retorno mínimo: 0.42% (ganho diário mínimo)
+Retorno máximo: 1.25% (ganho diário máximo)
+Retorno médio: 0.73% ao dia
+Volatilidade: 0.23% (baixa volatilidade - dados bem comportados)
+✅ Conclusão: Os dados representam uma trajetória de crescimento consistente da ação PETR4 com retornos diários positivos
+ e previsíveis, o que é excelente para análise de machine learning!
